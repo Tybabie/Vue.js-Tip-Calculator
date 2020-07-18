@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator | Vue.js</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <section>
+            <h1>Tip Calculator</h1>
+         <p> <b> Bill: # </b><input type="number" min="1" placeholder="Enter Bill Amount" id="bill" ref = "bill"></p>
+         <p><b>Tip: %</b><input type="number" min="1" placeholder="Percentage Tip" id="tip" ref = "tip"></p> 
+         <p id="people"> <b>N<ins>o</ins> of people sharing the bill</b></p>
+         <input type="number" min="1" placeholder="No of people" id="person" ref = "person"><br><br>
+         <button id="calculate" v-on:click = "calculate()">Calculate</button>
+         <div id="result">
+            <p> <b>{{tipTotal}}</b></p> 
+            <p><b> {{tipPerson}} </b></p>
+            <p><b> {{total}} </b> </p>
+            <p> <b> {{totalPerson}} </b></p>
+         </div>
+         </section> 
+    </div>
+
+    
+
+    <script src="resources/js/vue.js"></script>
+    <script src="resources/js/script.js"></script>
+</body>
+</html>
